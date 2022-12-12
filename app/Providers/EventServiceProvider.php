@@ -22,6 +22,11 @@ class EventServiceProvider extends ServiceProvider
         \Illuminate\Auth\Events\Verified::class => [
             \App\Listeners\EmailVerified::class,
         ],
+
+        \Illuminate\Auth\Events\PasswordReset::class => [
+            \App\Listeners\EmailPasswordReset::class,
+        ],
+        
     ];
 
     /**
