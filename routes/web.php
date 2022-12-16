@@ -19,3 +19,4 @@ Auth::routes(['verify' => true]);
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::resource('users', 'UsersController', ['only' => ['show', 'update', 'edit']]);
 Route::resource('topics', 'TopicsController', ['only' => ['index', 'show', 'create', 'store', 'update', 'edit', 'destroy']]);
+Route::resource('categories', 'CategoriesController', ['only' => ['show']]);
